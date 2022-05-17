@@ -11,18 +11,18 @@ body {
 .player {
   margin: 5rem auto;
   width: 50%;
-  /* min-width: 30%; */
   height: 364px;
   overflow: hidden;
 }
 
 .player_slider {
   color: #fb7813;
-  cursor: pointer;
   -webkit-appearance: none;
   background: #f7f7ee;
   height: 8px;
   border-radius: 3px;
+  cursor: ew-resize;
+  flex: 1;
 }
 
 .viewer {
@@ -34,7 +34,7 @@ body {
   height: 10px;
   background: #fb7813;
   flex-basis: 100%;
-  cursor: pointer;
+  cursor: ew-resize;
 }
 
 .player_controls {
@@ -44,12 +44,9 @@ body {
   align-items: center;
   gap: 1rem;
   margin-top: -0.5rem;
-  transition: all 0.4s;
+  transition: all 0.3s;
   width: 100%;
-}
-
-.player_controls * {
-  width: 20%;
+  /* height: 5px; */
 }
 
 .player:hover .player_controls {
@@ -62,4 +59,12 @@ body {
   outline: none;
   color: #fff;
   cursor: pointer;
+  flex: 1;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #17706E;
 }
