@@ -11,7 +11,8 @@ body {
 
 .player {
   margin: 5rem auto;
-  width: 50%;
+  width: 80%;
+  min-width: 320px;
   overflow: hidden;
   position: relative;
 }
@@ -21,6 +22,7 @@ body {
   -webkit-appearance: none;
   background: #f7f7ee;
   height: 8px;
+  min-width: 1rem;
   border-radius: 3px;
   cursor: pointer;
   flex: 1;
@@ -33,6 +35,7 @@ body {
 .progress {
   width: 100%;
   height: 0.3rem;
+  min-height: 0.1rem;
   background: rgba(0, 0, 0, .3);
   flex-basis: 100%;
   cursor: ew-resize;
@@ -56,10 +59,10 @@ body {
   width: 100%;
   max-height: 20%;
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.7rem;
 }
 
-.player_controls > * {
+.player_controls > *:not(.progress) {
   flex: 1;
 }
 
@@ -85,3 +88,9 @@ input[type='range']::-webkit-slider-thumb {
   height: 10px;
   background: #17706E;
 }
+
+/* @media screen and (max-width:1000px) {
+  .player_controls {
+    width: 30%;
+  }
+} */
