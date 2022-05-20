@@ -11,7 +11,7 @@ body {
 
 .player {
   margin: 5rem auto;
-  width: 80%;
+  width: 60%;
   min-width: 320px;
   overflow: hidden;
   position: relative;
@@ -39,13 +39,11 @@ body {
   background: rgba(0, 0, 0, .3);
   flex-basis: 100%;
   cursor: ew-resize;
+  display: flex;
 }
 
 .progress_filled {
-  width: 50%;
   background: #fb7813;
-  flex: 0;
-  flex-basis: 50%;
 }
 
 .player_controls {
@@ -53,13 +51,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   transition: all 0.3s;
   transform: translateY(100%) translateY(3rem);
   width: 100%;
   max-height: 20%;
   position: absolute;
-  bottom: 0.7rem;
+  bottom: 1rem;
 }
 
 .player_controls > *:not(.progress) {
@@ -88,9 +86,3 @@ input[type='range']::-webkit-slider-thumb {
   height: 10px;
   background: #17706E;
 }
-
-/* @media screen and (max-width:1000px) {
-  .player_controls {
-    width: 30%;
-  }
-} */
